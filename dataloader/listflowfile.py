@@ -14,8 +14,8 @@ def is_image_file(filename):
     return any(filename.endswith(extension) for extension in IMG_EXTENSIONS)
 
 def dataloader(filepath):
- monkaa_path = filepath + '/monkaa/frames_cleanpass'
- monkaa_disp = filepath + '/monkaa/disparity'
+ monkaa_path = filepath + '/monkaa_frames_cleanpass'
+ monkaa_disp = filepath + '/monkaa_disparity'
 
  
  monkaa_dir  = os.listdir(monkaa_path)
@@ -38,8 +38,8 @@ def dataloader(filepath):
     if is_image_file(monkaa_path+'/'+dd+'/right/'+im):
      all_right_img.append(monkaa_path+'/'+dd+'/right/'+im)
 
- flying_path = filepath + '/flyingthing3d/frames_cleanpass'
- flying_disp = filepath + '/flyingthing3d/disparity'
+ flying_path = filepath + '/frames_cleanpass'
+ flying_disp = filepath + '/frames_disparity'
  flying_dir = flying_path+'/TRAIN/'
  subdir = ['A','B','C']
 
@@ -76,8 +76,8 @@ def dataloader(filepath):
          test_right_img.append(flying_dir+ss+'/'+ff+'/right/'+im)
 
 
- driving_dir = filepath + '/driving/frames_cleanpass/' 
- driving_disp = filepath + '/driving/disparity/'
+ driving_dir = filepath + '/driving_frames_cleanpass/' 
+ driving_disp = filepath + '/driving_disparity/'
 
  subdir1 = ['35mm_focallength','15mm_focallength']
  subdir2 = ['scene_backwards','scene_forwards']
