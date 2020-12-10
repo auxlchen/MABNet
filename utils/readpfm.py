@@ -12,7 +12,7 @@ def readPFM(file):
     scale = None
     endian = None
 
-    header = file.readline().decode('latin-1') #读取第一行
+    header = file.readline().decode('latin-1') 
     if 'PF' in header:
         color = True
     elif 'Pf' in header:
@@ -20,8 +20,8 @@ def readPFM(file):
     else:
         raise Exception('Not a PFM file.')
 
-    line = file.readline().decode('latin-1') #这里读取第二行
-    width, height = re.findall('\d+', line) #找到line中的数字的字符串，作为列表返回
+    line = file.readline().decode('latin-1')
+    width, height = re.findall('\d+', line)
     width = int(width)
     height = int(height)
 
