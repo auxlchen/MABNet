@@ -26,7 +26,7 @@ parser.add_argument('--datapath', default='/home/jump/dataset/sceneflow',
                     help='datapath')
 parser.add_argument('--epochs', type=int, default=20,
                     help='number of epochs to train')
-parser.add_argument('--loadmodel', default= './trained_tiny/checkpoint_15.tar',
+parser.add_argument('--loadmodel', default= None, #'./trained_tiny/checkpoint_15.tar',
                     help='load model')
 parser.add_argument('--savemodel', default='./trained_tiny/',
                     help='save model')
